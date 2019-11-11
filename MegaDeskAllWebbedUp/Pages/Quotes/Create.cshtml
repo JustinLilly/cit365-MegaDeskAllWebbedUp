@@ -1,0 +1,67 @@
+﻿@page
+@model MegaDeskAllWebbedUp.Pages.Quotes.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Quote.Name" class="control-label"></label>
+                <input asp-for="Quote.Name" class="form-control" />
+                <span asp-validation-for="Quote.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quote.DeskWidth" class="control-label"></label>
+                <input asp-for="Quote.DeskWidth" class="form-control" />
+                <label asp-for="Quote.DeskWidth" class="limitation-label">Min: 24" and Max: 96"</label>
+                <span asp-validation-for="Quote.DeskWidth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quote.DeskDepth" class="control-label"></label>
+                <input asp-for="Quote.DeskDepth" class="form-control" />
+                <label asp-for="Quote.DeskDepth" class="limitation-label">Min: 12" and Max: 48"</label>
+                <span asp-validation-for="Quote.DeskDepth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quote.NumberOfDrawers" class="control-label"></label>
+                <input asp-for="Quote.NumberOfDrawers" class="form-control" />
+                <label asp-for="Quote.NumberOfDrawers" class="limitation-label">Max: 7</label>
+                <span asp-validation-for="Quote.NumberOfDrawers" class="text-danger"></span>
+            </div>
+            <div class="form-group, form-group-radio">
+                <label asp-for="Quote.SurfaceMaterial" class="control-label"></label><div></div>
+                <input asp-for="Quote.SurfaceMaterial" class="form-control" type="radio" value="Pine" checked />Pine
+                <input asp-for="Quote.SurfaceMaterial" class="form-control" type="radio" value="Laminate" />Laminate
+                <input asp-for="Quote.SurfaceMaterial" class="form-control" type="radio" value="Veneer" />Veneer
+                <input asp-for="Quote.SurfaceMaterial" class="form-control" type="radio" value="Oak" />Oak
+                <input asp-for="Quote.SurfaceMaterial" class="form-control" type="radio" value="Rosewood" />Rosewood
+                <span asp-validation-for="Quote.SurfaceMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group, form-group-radio">
+                <label asp-for="Quote.RushDays" class="control-label"></label><div></div>
+                <input asp-for="Quote.RushDays" class="form-control" type="radio" value="14" checked/>14 days - Normal
+                <input asp-for="Quote.RushDays" class="form-control" type="radio" value="3"  />3 days
+                <input asp-for="Quote.RushDays" class="form-control" type="radio" value="5" />5 days
+                <input asp-for="Quote.RushDays" class="form-control" type="radio" value="7" />7 days
+                <span asp-validation-for="Quote.RushDays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-center">
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

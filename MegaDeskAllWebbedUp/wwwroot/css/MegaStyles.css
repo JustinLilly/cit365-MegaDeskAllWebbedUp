@@ -1,0 +1,157 @@
+﻿@import url('https://fonts.googleapis.com/css?family=McLaren&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html {
+    //background-image: url('../web.png');
+    //background-size: contain;
+    //background-color: rgba(242, 242, 242, 0.9);
+    background-color: #262626;
+    color: whitesmoke;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    width: 60%;
+    margin: auto;
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left;
+}
+.display-4 {
+    font-family: 'Bangers', cursive;
+    font-size: 72px;
+}
+h2 {
+    font-family: 'McLaren', cursive;
+    font-size: 42px;
+}
+a, a:visited {
+    text-decoration: none !important;
+    color: darkorange;
+}
+
+
+/******************
+    Nav styles
+*******************/
+nav {
+    font-family: 'Bangers', cursive;
+    font-size: 24px;
+    margin-top: 1em;
+}
+nav span,nav a {
+    margin-right: .5em;
+}
+nav a:visited {
+    color: darkorange;
+}
+.mega-font {
+    font-family: 'Bangers', cursive !important;
+    font-size: 42px;
+    padding-right: .5em;
+}
+/*******************
+    Index styles
+********************/
+.table {
+    border: 2px solid gray;
+    padding: 4em;
+    margin: auto;
+    width: 100%;
+}
+td, th {
+    padding: 5px;
+    border-bottom: 1px dashed lightgray;
+}
+.spaceBetween {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.spaceBetween form {
+    padding-bottom: 0px;
+}
+th {
+    font-family: 'McLaren', cursive;
+}
+td {
+    text-align: center;
+}
+
+/*******************************
+    Create and Edit styles
+********************************/
+hr { display: none;}
+hr ~ .row {
+    width: 60%;
+    justify-content: center;
+}
+.form-group-radio{
+    padding: .75em;
+}
+.form-group {
+    padding: .75em;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    justify-content: space-between
+}
+input[type="number"].form-control, input[type="text"].form-control {
+    width: 200px;
+}
+input[type="submit"] { width: 60px; }
+.control-label {
+    font-weight: bold;
+    font-size: 18px;
+}
+.limitation-label {
+    font-size: 12px;
+}
+
+/*******************************
+    Details and Delete styles
+********************************/
+.row {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 30%;
+    margin: auto;
+    border: 2px solid gray;
+    padding: 2em;
+    margin-bottom: .5em;
+}
+dd, dt {
+    padding: .5em;
+    border-bottom: 1px dashed lightgray;
+}
+dt {
+    font-weight: bold;
+}
+.centered{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+
+    /* Sticky footer styles
+-------------------------------------------------- */
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
